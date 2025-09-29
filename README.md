@@ -1,10 +1,6 @@
-```markdown
 # 📊 Django Polls Application
 
-[![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/Django-3.0+-green.svg)](https://www.djangoproject.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Deployment](https://img.shields.io/badge/Deployment-AWS_Elastic_Beanstalk-orange.svg)](http://assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com/polls/)
+
 
 > A sleek, interactive polling application built with Django - create, vote, and analyze polls with ease.
 
@@ -112,13 +108,6 @@ polls/
 This application is deployed on AWS Elastic Beanstalk:
 - [http://assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com/polls/](http://assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com/polls/)
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-<p align="center">
-  Made with ❤️ by Your Name
-</p>
-```
