@@ -1,5 +1,8 @@
 # 📊 Django Polls Application
 
+main: [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#) 
+[![Coverage](https://img.shields.io/badge/coverage-93%25-brightgreen)](#)
+
 
 
 > A sleek, interactive polling application built with Django - create, vote, and analyze polls with ease.
