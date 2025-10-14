@@ -1,1 +1,50 @@
-"# Django .gitignore   *.pyc   __pycache__/   *.py[cod]   *$py.class   *.so   .Python   env/   build/   develop-eggs/   dist/   downloads/   eggs/   .eggs/   lib/   lib64/   parts/   sdist/   var/   *.egg-info/   .installed.cfg   *.egg   db.sqlite3   media   .env   venv/   " 
+# Django .gitignore
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+db.sqlite3
+media
+.env
+venv/
+
+# Coverage files
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Elastic Beanstalk
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

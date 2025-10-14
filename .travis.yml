@@ -12,13 +12,12 @@ script:
   - black --check .
   - python manage.py makemigrations --check --dry-run
   - pytest --cov=polls --cov=mysite --cov-report=term-missing --cov-report=html
-  - cd ..
 
 after_success:
-  - cd djangotutorial && coveralls
+  - coveralls
 
 before_deploy:
-  - cd djangotutorial
+  - cd $TRAVIS_BUILD_DIR/djangotutorial
 
 deploy:
   provider: elasticbeanstalk
