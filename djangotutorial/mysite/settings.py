@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,16 @@ SECRET_KEY = "django-insecure-k_ta78%*xp76&2lzzh@0sb#l1cc84_d!t%*3d%y#0x9vy2sifu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com"]
+# AWS Elastic Beanstalk health checks come from internal IPs
+# So we allow all hosts when deployed to AWS EB
+if os.environ.get('AWS_EB_ENV'):
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = [
+        "assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com",
+        "127.0.0.1",
+        "localhost",
+    ]
 
 
 # Application definition
