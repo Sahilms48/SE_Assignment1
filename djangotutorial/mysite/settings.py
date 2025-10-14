@@ -28,8 +28,8 @@ DEBUG = True
 
 # AWS Elastic Beanstalk health checks come from internal IPs
 # So we allow all hosts when deployed to AWS EB
-if os.environ.get('AWS_EB_ENV'):
-    ALLOWED_HOSTS = ['*']
+if os.environ.get("AWS_EB_ENV"):
+    ALLOWED_HOSTS = ["*"]
 else:
     ALLOWED_HOSTS = [
         "assignment1-env.eba-fvpe74pe.us-west-2.elasticbeanstalk.com",
