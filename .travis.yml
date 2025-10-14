@@ -1,0 +1,38 @@
+language: python
+python:
+  - "3.11"
+
+install:
+  - pip install --upgrade pip
+  - pip install -r djangotutorial/requirements.txt
+
+script:
+  - cd djangotutorial
+  - flake8
+  - black --check .
+  - python manage.py makemigrations --check --dry-run
+  - pytest --cov=polls --cov=mysite --cov-report=term-missing --cov-report=html
+  - cd ..
+
+after_success:
+  - cd djangotutorial && coveralls
+
+before_deploy:
+  - cd djangotutorial
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-west-2
+  app: assignment1
+  env: assignment1-env
+  bucket_name: elasticbeanstalk-us-west-2-626064810330
+  on:
+    branch: main
+  access_key_id:
+    secure: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
+
+cache:
+  pip: true
+
